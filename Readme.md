@@ -4,8 +4,17 @@
 
 ## table of contents 
 
--[Background] This code runs a simple chatbot which the user engages with the program in a conversation that the user has a choice in which they can end the conversation whenever.
+-[Background]#Background
 
--[Install] It was simple python code on repl which later is connected to github
+-[Install]#Install
 
--
+-(Usage)#Usage
+
+##Background
+-This code runs a simple chatbot which the user engages with the program in a conversation that the user has a choice in which they can end the conversation whenever.
+
+##Install
+-It was simple python code on installed on repl.it
+
+##Usage
+- Its used as a simple conversation for the user maybe can be used as a distraction 
