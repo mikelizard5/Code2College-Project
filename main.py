@@ -1,26 +1,19 @@
 import random
-def converse():
-  user_input =input(name + question())
-  know_me()
-  print(respond())
+def converse(user_input):
   while user_input != quit:
-    user_input = input(name + question())
-    know_me()
+    if " where are you from " in user_input:
+      print("I'm from Texas, but I was on a cruise recently and last night there was a shipwreck and now i washed up one shore and found this old ham radio. Wanna ask anything else?\n")
+    elif "old " in user_input:
+        print("I'm 23 funny enough my birthday was just a few days ago. Wanna ask anything else?\n")
+    elif " work " in user_input:
+          print("I was in programming and I made some good money, but i guess it don't mean much now I'm stuck herer in no where. Wanna ask me anything else?\n")
+    elif " what happened " in user_input:
+      print("I can't remember much I was partying last night on a crusie then out of no where the ship started sinking and next thing i know i washed up on this island being lucky enough to talk to anyone. Wanna ask me anyhting else?\n")
+    elif " programming " in user_input:
+      print(" oh well to be exact i was in cyber security and i got this super amazing job for a big tech company and I was really living the high life. Wanna ask me anyhting else?\n")
     print(respond())
-def know_me():
-  if question == "ask me anything":
-      user_question = input()
-      while user_question != quit:
-        if "where are you from" or "Where" in user_question:
-          print("I'm from Texas, but I was on a cruise recently and last night there was a shipwreck and now i washed up one shore and found this old ham radio\n")
-        elif "old" or "age" in user_question:
-            print("I'm 23 funny enough my birthday was just a few days ago\n")
-        elif "work" or "job" in user_question:
-              print("I was in programming and I made some good money, but i guess it don't mean much now I'm stuck herer in no where\n")
-        elif "what happened" or "happen" in user_question:
-          print("I can't remember much I was partying last night on a crusie then out of no where the ship started sinking and next thing i know i washed up on this island being lucky enough to talk to anyone\n")
-        elif "programming" or "coding" in user_question:
-          print(" oh well to be exact i was in cyber security and i got this super amazing job for a big tech company and I was really living the high life\n")
+    user_input = input(name + question())
+
 def question():
   questions = [
     " what day is it?\n",
@@ -33,7 +26,9 @@ def question():
     " do you work and if so what do you do?\n",
     " you wanna ask me anything?\n"
     ]
-  return random.choice(questions)
+  random_question = random.choice(questions)
+  return random_question
+  questions.remove(random_question)
 
 def respond():
   responds = [
@@ -47,7 +42,7 @@ def respond():
 
 def end_chat():
   quit = 'I gotta go' or 'i gotta go'
-  print("Alright thanks for talking to me "+ name)
+  print("Alright thanks for talking to me "+ name + '\n')
 
 response=input("...Hello...Can anyone hear...Me\n")
 if "yes" in response:
@@ -63,9 +58,9 @@ talk = input("Alright " + name + " I'm sorry if this is to much to ask for but t
 
 if "yes" or "sure" in talk:
   print('Thank you and if you wish to stop talking just say "I gotta go" and the conversation will end\n')
-  converse()
+  converse(user_input = input(name + question()))
 elif "no" or "nah" in talk:
   end_chat()
 else:
   print("I'll just take that as a yes")
-  converse()
+  converse(user_input = input(name + question()))
